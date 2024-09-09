@@ -1,26 +1,34 @@
-fx_version 'cerulean'
-games      { 'gta5' }
-lua54      'yes'
+-- Set the FX version and game type
+fx_version "cerulean"
+game "gta5"
 
-author      'CharlesHacks#9999 <charles@charleshacks.com>'
-description 'Vue + Tailwind Boilerplate for FiveM'
+-- Resource metadata
+author "loljoshie"
+description "Vite, Vue & TailwindCSS boilerplate made for FiveM."
+version "1.0"
 
---
--- Client
---
-
+-- Define client-side scripts
 client_scripts {
-    'client/client.lua',
+    "client/main.lua"
 }
 
---
--- NUI
---
+-- Define server-side scripts
+server_scripts {
+    "server/main.lua"
+}
 
-ui_page 'nui/dist/nui.html'
+-- Define scripts shared between client and server
+shared_scripts {
+    "config.lua"
+}
 
+-- Define files that should be included in the resource
 files {
-    'nui/dist/nui.html',
-    'nui/dist/app.js',
-    'nui/dist/app.css',
+    "html/*",
+    "html/assets/*",
+    "html/img/*",
+    "html/index.html"
 }
+
+-- Set the UI page to be displayed
+ui_page "html/index.html"

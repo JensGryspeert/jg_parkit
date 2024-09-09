@@ -1,46 +1,104 @@
-# Vue + Tailwind Boilerplate for FiveM
+<p align="center">
+  <a href="https://github.com/loljoshie/lj-boilerplate/#gh-light-mode-only" target="_blank">
+    <img src="https://user-images.githubusercontent.com/91661118/233499718-11d46bc9-0691-4e1c-9dc0-45dd84f0092d.svg" alt="lj-boilerplate" width="400">
+  </a>
+  <a href="https://github.com/loljoshie/lj-boilerplate/#gh-dark-mode-only" target="_blank">
+    <img src="https://user-images.githubusercontent.com/91661118/233499762-71b7c870-4c54-4312-b64f-26f006336317.svg" alt="lj-boilerplate" width="400">
+  </a>
+</p>
 
-A NUI / frontend development boilerplate for FiveM using Vue 3, Vue Router, Pinia, and TailwindCSS.
+<p align="center">
+Unlock your full development potential with the <a href="https://vitejs.dev/">Vite</a>, <a href="https://vuejs.org/">Vue</a> & <a href="https://tailwindcss.com/">TailwindCSS</a> boilerplate for FiveM. Designed to streamline your workflow and boost your productivity, this powerful tool delivers lightning-fast performance and a sleek, modern design. Download now and revolutionize your FiveM development!
+<p>
+<!--
+<p align="center">
+  <a href="https://heroicons.com"><strong>Something epic coming soon &rarr;</strong></a>
+</p>
+-->
+<p align="center">
+    <img src="https://img.shields.io/badge/framework-standalone-important" alt="Latest Status">
+    <img src="https://img.shields.io/badge/status-working-brightgreen.svg" alt="Latest Status">
+    <img src="https://img.shields.io/badge/version-1.0-blueviolet.svg" alt="Version 1.0">
+</p>
+
+## Recommended IDE Setup
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
 ## Features
+* Vite for fast, modern builds
+* Vue for a powerful and intuitive UI development experience
+* TailwindCSS for easy, customizable styling
+* Customizable configuration options
+* Lightweight and easy to use
 
-* Full boilerplate for FiveM with stores, event handling, etc.
-* "Hot reloading" using RCON to restart the resource automatically.
-* Dead simple build system using Laravel Mix.
-* NuiProxy service for listening to events, and sending callbacks.
+## Getting Started
+To get started with using this boilerplate, follow these steps:
 
-## What's included?
+* Clone this repository to your local machine.
+* Open the main directory of the cloned repository in your preferred editor.
+* CD into the "web" folder in your terminal by running `cd web`.
+```sh
+cd web
+```
+* Install the dependencies by running `npm install`.
+```sh
+npm install
+```
 
-* Vue 3
-* Vue Router with two pages.
-* Pinia with two stores.
-* TailwindCSS with SCSS, SFC, and inline examples.
-* Axios for sending NUI callbacks.
-* Mix for webpack support.
-* RCON and Dotenv for easier development lifecycle.
+![cd web npm install](https://user-images.githubusercontent.com/91661118/233503622-4a8a847d-80d4-441c-8e72-458851ad3531.gif)
 
 ## Usage
+To use this boilerplate, you can use the following commands in your terminal:
 
-`ch-fivem-vue-boilerplate` is a full resource, so just drop it into your resources folder. Inside, the `nui` folder contains the Vue project (and a `dist` folder for built assets.) Run `npm install` in this folder to install dependencies, then `npm run dev` to kick off your first asset build.
+#### Compile and Hot-Reload for Development:
+Use the following command to start the development server with hot-reload enabled:
 
-The folder structure and files are laid out pretty intuitively and according to best practicess. `services/NuiProxy.js` contains some simple helper utilities for sending NUI callbacks (you can see this in use in the Pinia store actions) and for receiving events from the client (this is registered in `App.vue`.)
+```sh
+npm run dev
+```
 
-Several Node.js build commands are included;
+![dev](https://user-images.githubusercontent.com/91661118/233505518-195efbab-6e65-481c-939f-826eb4c9c76f.gif)
 
-* `npm run dev` runs a one-off dev build.
-* `npm run watch` runs a watcher that rebuilds each time your files change.
-* `npm run prod` runs a production build with tree shaking, minification, etc.
+This will compile the Vue.js files and start a local server that you can access in your browser. Any changes you make to the files will be automatically recompiled and the browser will refresh to show the changes.
 
-### Hot Reloading
+#### Compile for Production:
+Use the following command to compile the Vue.js files for production:
 
-This resource contains a "hot reloading" feature that allows your resource to automatically restart each time a build is triggered (either by `npm run dev` or more ideally `npm run watch`.)
+```sh
+npm run build
+```
 
-To utilize hot reloading, you will need to enable RCON on your development FiveM server, then copy `nui/.env.example` to `nui/.env` and enter the RCON connection details. Additionally, be sure to update the resource name in `.env` so the build system knows which resource to restart.
+![build](https://user-images.githubusercontent.com/91661118/233505563-0dfecd20-dcea-4f6f-a127-e1dcf4163422.gif)
 
-## Support
+This will compile the files and create an `html` folder that contains the output. Once you've loaded compiled it successfully, you can now access your project in-game.
 
-Questions? I'm happy to try and help in my Discord. Join today at https://discord.gg/charleshacks.
+## Dark mode
+Now that dark mode is a first-class feature of many operating systems, it’s becoming more and more common to design a dark version of your website to go along with the default design.
 
-## License
+To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled:
 
-See [LICENSE.md](LICENSE.md).
+* Launch your preferred editor and access the main directory of the cloned repository.
+* Locate and open the src folder within the directory.
+* Navigate to the index.html file located inside the src folder.
+* Toggle between the `dark` or `light` mode as desired.
+
+![Code_JPZ4ssLrhI](https://user-images.githubusercontent.com/91661118/233740972-5d0bbcce-d677-4e08-8a60-fc38efa99e8c.gif)
+
+## Boilerplate Upgrade (optional)
+TailwindCSS has also developed a handful of official plugins for popular features that for one reason or another don’t belong in core yet.
+
+* ```npm install -D tailwindcss-animate```
+* ```npm install -D @tailwindcss/aspect-ratio```
+* ```npm install @headlessui/vue@latest```
+* ```npm install @heroicons/vue```
+* ```npm install -D @tailwindcss/forms```
+* ```npm i @tailwindcss/typography```
+
+## Credits
+This boilerplate was created by <a href="https://heroicons.com/" target="_blank">loljoshie</a>.
+
+## Contributions
+Contributions are always welcome! If you would like to contribute to this project, please create a pull request or open an issue.
+
+## Projects used with:
+* https://guildabot.com/
